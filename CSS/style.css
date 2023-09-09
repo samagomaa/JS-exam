@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+    color: #f9f6f6!important;
+}
+.sideNavMenu{
+    z-index: 999;
+}
+.logo{
+    width: 50px;
+}
+i,li{
+    cursor: pointer;
+}
+.footer p{
+    color: rgb(153, 153, 153)!important;;
+}
+.movie-layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 8, 8, 0.411);
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.movie img{
+    transition: all 0.5s;
+}
+.movie:hover .movie-layer{
+    opacity: 1;
+}
+.movie:hover img{
+    transform: rotate(5deg) scale(1.2);
+}
+.rate h4{
+    width: 50px;
+    height: 50px;
+    border: solid 2px green;
+}
+.searchBar{
+    background: transparent;
+}
+
+input:hover, 
+input:focus, 
+input:active{
+    box-shadow: none !important;
+    background: transparent !important;
+    }
+
+.searchBar::placeholder{
+    color: #ffffff !important;
+}
+
+input, select, textarea{
+    color: #ffffff !important;
+}
+
+textarea:focus, input:focus {
+    color: #ffffff !important;
+}
+
+.contactInput{
+    background: transparent;
+}
+.contactInput::placeholder{
+    color: #7a7676f5 !important;
+}

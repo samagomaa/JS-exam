@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sideNavMenu h-100 position-fixed d-flex">
+        <div class="navTab d-flex flex-column justify-content-between h-100 p-4 bg-black">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li  onclick="getmovie('movie/now_playing')" class="py-2 position-relative">Now playing</li>
+                    <li  onclick="getmovie('movie/popular')" class="py-2 position-relative">Popular</li>
+                    <li  onclick="getmovie('movie/top_rated')" class="py-2 position-relative">Top Rated</li>
+                    <li  onclick="getmovie('trending/all/day')" class="py-2 position-relative">Trending</li>
+                    <li  onclick="getmovie('movie/upcoming')" class="py-2 position-relative">Upcoming</li>
+                    <li  class="py-2 position-relative"> <a class="text-decoration-none text-white" href="#startCotact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="navFooter">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f px-2 py-2" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter px-2 py-2" style="color: #ffffff;"></i>
+                    <i class="fa-solid fa-globe px-2 py-2" style="color: #ffffff;"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright © 2022 All Rights <br> Reserved. </p>
+                    <p>Created by <a class="text-decoration-none link-danger" href="#">Housam Ramadan</a></p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="navHeader d-flex flex-column justify-content-between py-4 text-center px-2 bg-white">
+            <img class="logo" src="IMGS/logo.png" alt="" srcset="">
+            <i class="fa-solid openCloseIcon fa-align-justify  fa-2x" style="color: #000000;"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block" style="color: #000000;"></i>
+                <i class="fa-solid fa-share-nodes" style="color: #000000;"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-4">
+        <input onkeyup="searchMovie()" class="form-control searchBar w-50 mx-auto my-4 rounded-pill border-2 border-white" type="text" placeholder="Search">
+        <div id="rowDate" class="row">
+        </div>
+        <div class="contactSection">
+            <h3 id="startCotact" class="py-4 px-2">Contact US</h3>
+            <div class="row text-center mx-auto">
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Email">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Phone">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Age">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Password">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="ReEnter Password">
+                </div>
+            </div>
+            <button class="btn btn-outline-light border-0 m-3 fs-5 " type="submit">Submit</button>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/62cf307394.js" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
