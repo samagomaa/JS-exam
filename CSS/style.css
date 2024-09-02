@@ -81,6 +81,9 @@ i,li{
     opacity: 0;
     transition: all 0.5s;
 }
+.movie{
+    cursor: pointer;
+}
 .movie img{
     transition: all 0.5s;
 }

@@ -2,7 +2,7 @@ $(document).ready(function(){
     getmovie()
     let boxwidth = $(".sideNavMenu .navTab").outerWidth()
     $(".sideNavMenu").animate({left:`-${boxwidth}px`} , 200)
-    $(".loadingScreen").fadeOut(500)
+    $(".loadingScreen").fadeOut(1000)
 })
 
 
