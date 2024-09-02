@@ -9,8 +9,12 @@
     <link rel="icon" type="image/x-icon" href="IMGS/logo.png">
 </head>
 <body>
-    <div class="sideNavMenu h-100 position-fixed d-flex">
-        <div class="navTab d-flex flex-column justify-content-between h-100 p-4 bg-black">
+    <div class="loadingScreen">
+        <span class="loader"></span>
+    </div>
+<!------------- Navbar --------------------->
+    <div class="sideNavMenu d-flex">
+        <div class="navTab d-flex flex-column justify-content-between h-100 p-4 bg-dark">
             <div class="links">
                 <ul class="list-unstyled overflow-hidden">
                     <li  onclick="getmovie('movie/now_playing')" class="py-2 position-relative">Now playing</li>
@@ -32,48 +36,63 @@
                     <p>Created by <a class="text-decoration-none link-danger" href="#">Housam Ramadan</a></p>
                 </div>
             </div>
-            
         </div>
         <div class="navHeader d-flex flex-column justify-content-between py-4 text-center px-2 bg-white">
             <img class="logo" src="IMGS/logo.png" alt="" srcset="">
-            <i class="fa-solid openCloseIcon fa-align-justify  fa-2x" style="color: #000000;"></i>
+            <i class="fa-solid CloseIcon fa-align-justify fa-2x" style="color: #000000;"></i>
             <div>
                 <i class="fa-solid fa-globe d-block" style="color: #000000;"></i>
                 <i class="fa-solid fa-share-nodes" style="color: #000000;"></i>
             </div>
         </div>
     </div>
-
-    <div class="container p-4">
-        <input onkeyup="searchMovie(value)" class="form-control searchBar w-50 mx-auto my-4 rounded-pill border-2 border-white" type="text" placeholder="Search">
-        <div id="rowDate" class="row">
-        </div>
-        <div class="contactSection">
-            <h3 id="startCotact" class="py-4 px-2">Contact US</h3>
-            <div class="row text-center mx-auto">
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Name">
-                </div>
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Email">
-                </div>
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Phone">
-                </div>
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Age">
-                </div>
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="Enter Your Password">
-                </div>
-                <div class="col-md-6">
-                    <input class="contactInput w-100 text-center form-control py-1 m-1 border-0 border-bottom border-white rounded-0 fs-5" type="text" placeholder="ReEnter Password">
-                </div>
-            </div>
-            <button class="btn btn-outline-light border-0 m-3 fs-5 " type="submit">Submit</button>
-            
+<!------------- search bar ------------------>
+    <div class="mx-auto pt-5">
+        <input onkeyup="searchMovie(value)" class="form-control searchBar w-50 mx-auto rounded-pill border-2 border-white" type="text" placeholder="Search">
+    </div>
+<!------------- movies cards ---------------->
+    <div class="container pt-4">
+        <div id="rowDate" class="row g-3">
         </div>
     </div>
+<!------------- contact section ------------->
+    <div class="container">
+            <form class="row mx-auto g-4">
+                <div class="col-md-12">
+                    <h3 id="startCotact" class="py-4 px-2">Contact US</h3>
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="Enter Your Email">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="Enter Your Phone">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="Enter Your Age">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="Enter Your Password">
+                </div>
+                <div class="col-md-6">
+                    <input class="contactInput text-center form-control fs-5" type="text" placeholder="ReEnter Password">
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-outline-light border-0 m-3 fs-5 " type="submit">Submit</button>
+                </div>
+            </form>
+    </div>
+
+<!-------------- movie modal ---------------->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="movieModal"  class="modal-content">
+        
+      </div>
+    </div>
+  </div>
 
 
 
